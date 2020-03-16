@@ -1,0 +1,17 @@
+{
+  "name": "notifyx",
+  "version": "1.0.0",
+  "description": "to complement console.log with better terminal output",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bash-color": "0.0.4",
+    "lodash": "^4.17.15",
+    "standard": "^14.3.3",
+    "util": "^0.12.2"
+  }
+}
