@@ -13,9 +13,11 @@ color.white('this text is white');
  */
 
 module.exports = function () {
+    
+    const notify = {}
     const util = require('util')
-    const { isObject } = require('lodash')
-    var notify = {}
+    const { objectSize } = require('./utils')
+
     var color = require('bash-color')
 
     notify.ulog = (l = false, err = false, strongMessage) => {
@@ -28,7 +30,7 @@ module.exports = function () {
             return
         }
         if (err === true || err === -1) {
-            if (isObject(l) && strongMessage) {
+            if (objectSize(l) && strongMessage) {
                 if (l.message) console.log(color.red(l.message))
             }
             console.log('  ')
@@ -36,7 +38,7 @@ module.exports = function () {
             console.log(color.red('-----------------------', true))
             console.log('  ')
         } else {
-            if (isObject(l) && strongMessage) {
+            if (objectSize(l) && strongMessage) {
                 if (l.message) console.log(color.blue(l.message))
             }
             console.log(util.inspect(l, false, null, true)) // enable colros

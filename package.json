@@ -10,7 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "bash-color": "0.0.4",
-    "lodash": "^4.17.15",
     "util": "^0.12.2"
   }
 }
